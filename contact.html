@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Contact · Conception MADA Transit</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      MADA Transit
+      <span class="ref">Proposition · MT-CONC-01</span>
+    </a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="comprendre.html">Compréhension</a>
+      <a href="design.html">Design</a>
+      <a href="maquettes.html">Maquettes</a>
+      <a href="feuille-de-route.html">Feuille de route</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero compact">
+    <div>
+      <p class="eyebrow">Chapitre 05 · Prochain pas</p>
+      <h1>Fixons l'atelier de validation et démarrons le prototype.</h1>
+      <p class="dek">La prochaine étape est un atelier d'une demi-journée pour lever les six hypothèses ouvertes. À l'issue, nous pouvons démarrer immédiatement le prototype du modèle de données.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">Les six hypothèses à lever</p>
+    <h2>Six questions concrètes, à trancher ensemble.</h2>
+    <p class="dek">Chaque réponse a un impact direct sur le modèle de données. Les trancher avant le code évite les refontes à mi-chantier.</p>
+
+    <div class="rules-grid">
+      <div class="rule"><span class="code">H1 · Retour à vide</span><p>Un voyage peut-il avoir un retour sans marchandise ni facturation ? Hypothèse retenue : oui.</p></div>
+      <div class="rule"><span class="code">H2 · Client par trajet</span><p>Un trajet peut-il être facturé à un client différent de celui du voyage ? Hypothèse retenue : non.</p></div>
+      <div class="rule"><span class="code">H3 · Base du délai</span><p>Le délai de paiement est-il en jours calendaires ou ouvrés ? Hypothèse retenue : calendaires.</p></div>
+      <div class="rule"><span class="code">H4 · Imputation multiple</span><p>Un encaissement peut-il couvrir plusieurs factures en une écriture ? Hypothèse retenue : non à ce stade.</p></div>
+      <div class="rule"><span class="code">H5 · Avoirs</span><p>Faut-il gérer les avoirs (notes de crédit) ? À confirmer avec vous.</p></div>
+      <div class="rule"><span class="code">H6 · TVA</span><p>Une TVA ou taxe s'applique-t-elle, variable selon modalité ou destination ? À confirmer.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">L'équipe en face de vous</p>
+    <h2>Trois personnes, trois rôles clairs.</h2>
+
+    <div class="team">
+      <div class="team-member">
+        <div class="avatar">AC</div>
+        <h4>Architecte conception</h4>
+        <div class="role">Design système · modèle de données</div>
+        <p>Interlocuteur principal pendant la phase de conception. Pilote l'atelier de validation, le modèle de données et les choix structurants.</p>
+      </div>
+      <div class="team-member">
+        <div class="avatar">DE</div>
+        <h4>Développement</h4>
+        <div class="role">Django · PostgreSQL · intégration</div>
+        <p>Construit les trois domaines applicatifs, les rapports et l'intégration des données existantes. Livre un prototype à six semaines.</p>
+      </div>
+      <div class="team-member">
+        <div class="avatar">GP</div>
+        <h4>Chef de projet</h4>
+        <div class="role">Planning · formation · bascule</div>
+        <p>Pilote la relation, le planning, la formation des utilisateurs et la bascule en production avec période de double saisie courte si nécessaire.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">Demande de rendez-vous</p>
+    <h2>Dites-nous quand vous êtes disponible.</h2>
+    <p class="dek">Nous revenons sous 48 h avec une proposition de créneau pour l'atelier de validation.</p>
+
+    <form class="form-grid" onsubmit="event.preventDefault(); this.querySelector('.ack').hidden = false; this.querySelector('button').disabled = true;">
+      <div class="field">
+        <label for="nom">Nom complet</label>
+        <input type="text" id="nom" required>
+      </div>
+      <div class="field">
+        <label for="fonction">Fonction</label>
+        <input type="text" id="fonction" placeholder="Directeur, responsable logistique…">
+      </div>
+      <div class="field">
+        <label for="email">Adresse courriel</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="field">
+        <label for="tel">Téléphone</label>
+        <input type="tel" id="tel" placeholder="+261 …">
+      </div>
+      <div class="field full">
+        <label for="disponibilites">Vos disponibilités préférées</label>
+        <textarea id="disponibilites" placeholder="Ex. mardi 27 octobre matin, jeudi 29 après-midi…"></textarea>
+      </div>
+      <div class="field full">
+        <label for="notes">Points que vous voulez aborder en priorité</label>
+        <textarea id="notes" placeholder="Facultatif — un sujet du cahier des charges, une question sur la proposition, un cas particulier…"></textarea>
+      </div>
+      <div class="field full">
+        <button type="submit" class="btn btn-primary" style="justify-content:center;">Envoyer la demande <span class="arrow">→</span></button>
+        <p class="ack" hidden style="margin-top:12px;padding:12px 16px;background:var(--tag-bg);font-size:13px;max-width:none;">Merci. Nous revenons vers vous sous 48 h ouvrées avec une proposition de créneau. <strong>Démonstration — ce formulaire ne transmet rien.</strong></p>
+      </div>
+    </form>
+  </section>
+
+  <section>
+    <div class="page-nav">
+      <a href="feuille-de-route.html">
+        <span class="label">← Précédent</span>
+        <span class="title">Feuille de route</span>
+      </a>
+      <a href="index.html" class="next">
+        <span class="label">Revenir à l'accueil →</span>
+        <span class="title">Accueil</span>
+      </a>
+    </div>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <h6>À propos de ce document</h6>
+      <div class="colophon">Conception MADA Transit</div>
+      <p>Proposition de système de gestion des opérations de transport, de la facturation et du suivi des créances clients pour MADA Transit SARL.</p>
+    </div>
+    <div>
+      <h6>Pages</h6>
+      <a href="index.html">Accueil</a>
+      <a href="comprendre.html">Compréhension</a>
+      <a href="design.html">Design</a>
+      <a href="maquettes.html">Maquettes</a>
+      <a href="feuille-de-route.html">Feuille de route</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h6>Prochain pas</h6>
+      <a href="contact.html">Fixer l'atelier de validation</a>
+      <p style="margin-top:8px;color:var(--fg-dim);font-size:12px;">Agence de conception et de développement</p>
+    </div>
+    <div class="legal">
+      <span>Document de travail · version 1.0</span>
+      <span>19 oct. 2026</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
