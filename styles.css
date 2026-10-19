@@ -224,9 +224,6 @@ h2 {
 p { margin: 0 0 14px; max-width: 65ch; }
 p strong { color: var(--fg); }
 a { color: var(--primary); }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) a { color: var(--primary); }
-}
 
 /* ─── Button / CTA ─────────────────────────────────────────────────── */
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
